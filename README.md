@@ -5,4 +5,4 @@ The simple abstract model, using BeanUtils and introspection, to define state as
 
 Spring HATEAOS provides the links to the sequenced resources based on the state of the model. i.e. if a resource is completed, it will include links to itself, its previous and its next resource in the sequence of the Wizard. If it is not completed, it will not provide a link to the next resource.
 
-![HATEAOS Wizard](https://github.com/johnhunsley/hateoas-wizard/HATEAOS%20Wizard.png "HATEAOS Wizard") 
+![HATEAOS Wizard](./HATEAOS%20Wizard.png "HATEAOS Wizard") 
