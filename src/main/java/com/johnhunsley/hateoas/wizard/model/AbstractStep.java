@@ -13,6 +13,9 @@ import java.lang.reflect.InvocationTargetException;
  *
  *  Enforces a sequence number to each sub type and a function for assessing whether or not the concrete sub type is
  *  complete or not based on the fields of the sub type instance being not null.
+ *
+ *  Note - model types which represent the Steps in the Wizard need only inherit from this class if not annotated with
+ *  the {@link WizardStep} stereotype
  * </p>
  * @author jphunsley@gmail.com
  */
