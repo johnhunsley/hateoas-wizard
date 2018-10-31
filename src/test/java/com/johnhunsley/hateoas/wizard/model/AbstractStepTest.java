@@ -1,6 +1,8 @@
 package com.johnhunsley.hateoas.wizard.model;
 
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
 
 import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -11,7 +13,7 @@ public class AbstractStepTest {
 
     @Test
     public void testIsComplete() {
-        TestStep1 step1 = new TestStep1();
+        AbstractStep step1 = Mockito.mock(AbstractStep.class);
         step1.setMyInt(55);
         step1.setMyStr("something");
 

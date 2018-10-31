@@ -1,7 +1,10 @@
 package com.johnhunsley.hateoas.wizard.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
+import org.springframework.hateoas.ResourceSupport;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
@@ -19,15 +22,16 @@ import java.lang.reflect.InvocationTargetException;
  * </p>
  * @author jphunsley@gmail.com
  */
-public abstract class AbstractStep {
-    final int sequence;
+public abstract class AbstractStep extends ResourceSupport {
+    final int stepNumber;
 
     /**
      *
-     * @param sequence
+     * @param stepNumber
      */
-    public AbstractStep(final int sequence) {
-        this.sequence = sequence;
+    @JsonCreator
+    public AbstractStep(@JsonProperty("stepNumber") final int stepNumber) {
+        this.stepNumber = stepNumber;
     }
 
     /**
